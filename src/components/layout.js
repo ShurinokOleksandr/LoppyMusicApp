@@ -1,33 +1,33 @@
 import React from 'react';
-import NavigationButton from "@/shared/ui/navigation-button";
+import NavigationButtons from "shared/ui/Buttons/navigation-buttons";
 
 const Layout = ({children}) => {
     return (
-        <main >
-            <div className="flex relative ">
-                <div className="w-1/6"></div>
-                <div className='w-1/6 border border-stone-300 fixed min-h-screen '>
-                    <div className='pl-10 my-7 '>
-                        Logo
+        <>
+            <main>
+                <div className='flex h-screen'>
+                    <div className='bg-white text-stone-400 w-1/6 overflow-hidden   sticky'>
+                        <div className=''>
+                            Logo
+                        </div>
+                        <div className=' '>
+                            <NavigationButtons/>
+                        </div>
                     </div>
-                    <div className='  '>
-                        <NavigationButton/>
-                        <NavigationButton/>
-                        <NavigationButton/>
-                        <NavigationButton/>
+                    <div className='flex-1 w-4/6  bg-blue-100'>
+                        <div className='h-[85%] overflow-auto'>
+                            {children}
+                        </div>
+                        <div className='h-[15%] w-full border-t bg-white border-t'>
+                            playerfffffffffffffffffff
+                        </div>
+                    </div>
+                    <div className='w-1/6 text-stone-400 w-1/6 overflow-hidden   sticky'>
+
                     </div>
                 </div>
-                <div className='w-4/6    min-h-screen '>
-                    {children}
-                    <div className=' border-t px-0  border-stone-300 w-full h-20 bg-white absolute sticky bottom-0'>
-                        playerfffffffffffffffffff
-                    </div>
-                </div>
-                <div className='w-1/6 min-h-screen border border-stone-300 fixed top-0 right-0 '>
-                    <NavigationButton/>
-                </div>
-            </div>
-        </main>
+            </main>
+        </>
     );
 };
 

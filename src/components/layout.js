@@ -1,33 +1,22 @@
 import React from 'react';
-import NavigationButtons from "shared/ui/Buttons/navigation-buttons";
+import Sidebar from "src/widgets/sidebar/ui";
+import Player from "src/widgets/player/ui";
+import MainContent from "src/widgets/main/ui";
+import SidebarContent from "src/widgets/right-sidebar-content/ui";
+
 
 const Layout = ({children}) => {
     return (
-        <>
             <main>
                 <div className='flex h-screen'>
-                    <div className='bg-white text-stone-400 w-1/6 overflow-hidden   sticky'>
-                        <div className=''>
-                            Logo
-                        </div>
-                        <div className=' '>
-                            <NavigationButtons/>
-                        </div>
-                    </div>
+                    <Sidebar/>
                     <div className='flex-1 w-4/6  bg-blue-100'>
-                        <div className='h-[85%] overflow-auto'>
-                            {children}
-                        </div>
-                        <div className='h-[15%] w-full border-t bg-white border-t'>
-                            playerfffffffffffffffffff
-                        </div>
+                        <MainContent>{children}</MainContent>
+                        <Player/>
                     </div>
-                    <div className='w-1/6 text-stone-400 w-1/6 overflow-hidden   sticky'>
-
-                    </div>
+                    <SidebarContent/>
                 </div>
             </main>
-        </>
     );
 };
 

@@ -7,16 +7,16 @@ import SidebarContent from "src/widgets/right-sidebar-content/ui";
 
 const Layout = ({children}) => {
     return (
-            <main>
-                <div className='flex h-screen'>
-                    <Sidebar/>
-                    <div className='flex-1 w-4/6  bg-blue-100'>
-                        <MainContent>{children}</MainContent>
-                        <Player/>
-                    </div>
-                    <SidebarContent/>
+        <main>
+            <div className='flex h-screen'>
+                <Sidebar/>
+                <div className='flex-1 w-4/6  bg-blue-100'>
+                    <MainContent>{children}</MainContent>
+                    <Player/>
                 </div>
-            </main>
+                <SidebarContent/>
+            </div>
+        </main>
     );
 };
 

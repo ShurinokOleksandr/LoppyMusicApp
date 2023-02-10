@@ -8,7 +8,6 @@ const PlayLists = () => {
             <BasicButton  className={'flex items-center text-stone-700 font-bold my-4'}>
                 playlist 1
             </BasicButton>
-
         </div>
     );
 };

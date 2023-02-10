@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Index = () => {
+const Logo = () => {
     return (
         <div className='my-10 text-2xl font-bold text-stone-700'>
             <span className=' text-[#e60000]'>Loppy</span>
@@ -9,4 +9,4 @@ const Index = () => {
     );
 };
 
-export default Index;
+export default Logo;

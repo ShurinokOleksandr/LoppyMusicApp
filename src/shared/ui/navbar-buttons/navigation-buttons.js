@@ -1,6 +1,6 @@
 import React from 'react';
-import SecondBlock from "../../../../../../WebstormProjects/music-app/src/entities/home-makeplaylist/ui";
-import FirstBlock from "src/entities/navbar-first/ui";
+import SecondBlock from "entities/home-makeplaylist/ui";
+import FirstBlock from "entities/navbar-first/ui";
 
 
 const NavigationButtons = () => {

@@ -11,7 +11,7 @@ const FirstBlock = () => {
                 <ComputerDesktopIcon width={'25'}  stroke={'#293046'} fill={`${pathname.slice(1) === '' ? `#e60000` : "none"}`}/>
             </BasicButton>
             <BasicButton link={'search'} name={'Поиск'} className={'flex items-center my-5'}>
-                <MagnifyingGlassIcon width={'25'}  stroke={'#293046'} fill={`${pathname.slice(1) === 'search' ? `#e60000` : "none"}`}/>
+                <MagnifyingGlassIcon width={'25'} stroke={'#293046'} fill={`${pathname.slice(1) === 'search' ? `#e60000` : "none"}`}/>
             </BasicButton>
             <BasicButton link={'collection'} name={'Моя медиатека'} className={'flex items-center my-5'}>
                 <BookOpenIcon width={'25'} stroke={'#293046'} fill={`${pathname.slice(1) === 'collection' ? `#e60000` : "none"}`}/>

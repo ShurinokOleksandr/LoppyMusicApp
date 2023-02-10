@@ -1,0 +1,22 @@
+input[type="range"] {
+    -webkit-appearance: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 50px; /* iOS */
+}
+::-moz-range-track {
+    border-radius: 50px; /* iOS */
+    height: 20px;
+    background: #8d8484;
+}
+
+::-moz-range-thumb {
+    border: none;
+    height: 11px;
+    width: 11px;
+    background: #ffffff;
+    box-shadow: -200px 0 0 198px #cc040b;
+}
+
+

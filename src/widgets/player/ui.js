@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
     ArrowPathRoundedSquareIcon,
     BarsArrowDownIcon,
@@ -11,7 +11,6 @@ import Mix from '/public/navigation-icons/mix.svg'
 import PlayerRange from "src/shared/ui/player-range";
 import MusicTime from "src/shared/ui/music-time";
 const Player = () => {
-    const [state,setState]= useState()
     return (
         <div className='h-[15%] w-full border-t bg-white border-t overflow-hidden'>
             <div>
@@ -44,7 +43,6 @@ const Player = () => {
                 </div>
             </div>
         </div>
-    );
-};
-
+    )
+}
 export default Player;

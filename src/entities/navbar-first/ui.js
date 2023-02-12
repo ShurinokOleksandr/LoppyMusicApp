@@ -1,7 +1,8 @@
 import React from 'react';
-import {BookOpenIcon, ComputerDesktopIcon, MagnifyingGlassIcon} from "@heroicons/react/24/outline";
 import BasicButton from "shared/ui/Navbar-Buttons/basic-button";
 import {useRouter} from "next/router";
+import {ComputerDesktopIcon} from "@heroicons/react/24/outline";
+import {BookOpenIcon, MagnifyingGlassIcon} from "@heroicons/react/24/solid";
 
 const FirstBlock = () => {
     const {pathname} = useRouter()

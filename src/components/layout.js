@@ -10,7 +10,7 @@ const Layout = ({children}) => {
         <main>
             <div className='flex h-screen'>
                 <Sidebar/>
-                <div className='flex-1 w-4/6  bg-blue-100'>
+                <div className='flex-1   '>
                     <MainContent>{children}</MainContent>
                     <Player/>
                 </div>

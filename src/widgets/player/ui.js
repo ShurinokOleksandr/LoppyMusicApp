@@ -12,7 +12,7 @@ import PlayerRange from "src/shared/ui/player-range";
 import MusicTime from "src/shared/ui/music-time";
 const Player = () => {
     return (
-        <div className='h-[15%] w-full border-t bg-white border-t overflow-hidden'>
+        <div className='h-[15%] w-full border-t-2 bg-white border-t overflow-hidden'>
             <div>
                 <div className='flex w-full justify-between items-center p-3'>
                     <div className={'flex w-2/6 items-center'}>

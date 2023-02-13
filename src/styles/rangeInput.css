@@ -3,10 +3,10 @@ input[type="range"] {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    border-radius: 50px; /* iOS */
+    border-radius: 50px;
 }
 ::-moz-range-track {
-    border-radius: 50px; /* iOS */
+    border-radius: 50px;
     height: 20px;
     background: #8d8484;
 }
@@ -16,7 +16,7 @@ input[type="range"] {
     height: 11px;
     width: 11px;
     background: #ffffff;
-    box-shadow: -200px 0 0 198px #cc040b;
+    box-shadow: -800px 0 0 800px #cc040b;
 }
 
 

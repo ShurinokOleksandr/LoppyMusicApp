@@ -1,5 +1,5 @@
 import React from 'react';
-import BasicButton from "src/shared/ui/Navbar-Buttons/basic-button";
+import BasicButton from "src/shared/ui/navbar-buttons/basic-button";
 
 const PlayLists = () => {
     return (

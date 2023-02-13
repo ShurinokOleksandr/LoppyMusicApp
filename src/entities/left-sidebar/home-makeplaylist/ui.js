@@ -1,5 +1,5 @@
 import React from 'react';
-import BasicButton from "shared/ui/Navbar-Buttons/basic-button";
+import BasicButton from "src/shared/ui/navbar-buttons/basic-button";
 import {BookOpenIcon, HeartIcon, MagnifyingGlassIcon, SquaresPlusIcon} from "@heroicons/react/24/outline";
 import {useRouter} from "next/router";
 

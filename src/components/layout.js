@@ -7,8 +7,8 @@ import SidebarContent from "src/widgets/right-sidebar-content/ui";
 
 const Layout = ({children}) => {
     return (
-        <main>
-            <div className='flex h-screen'>
+        <main className={''}>
+            <div className='flex h-screen font-mono  '>
                 <Sidebar/>
                 <div className='flex-1   '>
                     <MainContent>{children}</MainContent>

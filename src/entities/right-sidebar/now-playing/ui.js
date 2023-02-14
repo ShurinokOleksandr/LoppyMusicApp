@@ -6,7 +6,7 @@ const NowPlay = ({className}) => {
     return (
         <div className={className}>
             <div>
-                <Image src={lol} className={'h-[170px] rounded-2xl  w-30'}/>
+                <Image src={lol} className={'h-[170px] rounded-2xl object-cover w-30'}/>
             </div>
             <div className={'flex justify-between items-center'}>
                 <div className={'text-[#5b647d]'}>

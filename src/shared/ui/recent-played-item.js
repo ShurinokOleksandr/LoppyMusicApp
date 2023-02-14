@@ -9,10 +9,10 @@ const RecentPlayedItem = () => {
                 <div className={'flex '}>
                     <Image src={lol} alt="avatar" className={'w-10 h-10 rounded object-cover mr-2'}/>
                     <div className={'text-[#5b647d]'}>
-                        <p className='text-sm font-semibold'>
+                        <p className='text-sm font-semibold hover:underline'>
                             Name song
                         </p>
-                        <p className='text-xs'>
+                        <p className='text-xs hover:underline'>
                             Avtor song
                         </p>
                     </div>

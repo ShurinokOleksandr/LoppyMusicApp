@@ -3,6 +3,7 @@ import BasicButton from "src/shared/ui/navbar-buttons/basic-button";
 import { HeartIcon,  SquaresPlusIcon} from "@heroicons/react/24/outline";
 import {useRouter} from "next/router";
 
+
 const SecondBlock = () => {
     const {pathname} = useRouter()
     const handleClick = () => console.log(1)

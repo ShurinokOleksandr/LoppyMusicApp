@@ -12,15 +12,17 @@ const BasicButton = ({link,className,classParent,children,name,onClick}) => {
                         href={`/${link}`}
                     >
                         {children}
-                        <p className={`${pathname.slice(1) === link ? `font-bold text-[#293046]` : "font-semibold"} ml-6 duration-50 hover:font-bold `}>{name}</p>
+                        <p className={`${pathname.slice(1) === link ? `font-bold text-[#293046]` : "font-semibold"} ml-6 duration-50 hover:font-bold `}>
+                            {name}
+                        </p>
                     </Link>
                     :
-                    <button
-                        onClick={() => onClick()}
-                        className={className}
+                    <button className={className}
                     >
                         {children}
-                        <p className={`${pathname.slice(1) === link ? `font-bold text-[#293046]` : "font-semibold"} ml-6 duration-50 hover:font-bold `}>{name}</p>
+                        <p className={`${pathname.slice(1) === link ? `font-bold text-[#293046]` : "font-semibold"} ml-6 duration-50 hover:font-bold `}>
+                            {name}
+                        </p>
                     </button>
             }
         </div>

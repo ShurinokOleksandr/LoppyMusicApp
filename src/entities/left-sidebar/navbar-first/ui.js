@@ -8,7 +8,7 @@ const FirstBlock = () => {
     const {pathname} = useRouter()
     return (
         <div>
-            <BasicButton link={''} name={'Главная'} className={'flex items-center my-5'}>
+            <BasicButton link={'/'} name={'Главная'} className={'flex items-center my-5'}>
                 <ComputerDesktopIcon width={'25'}  stroke={'#293046'} fill={`${pathname.slice(1) === '' ? `#e60000` : "none"}`}/>
             </BasicButton>
             <BasicButton link={'search'} name={'Поиск'} className={'flex items-center my-5'}>

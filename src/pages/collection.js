@@ -17,7 +17,6 @@ const Collection = () => {
                             </div>
                         </Link>
                     </li>
-
                 </ul>
             </div>
         </div>

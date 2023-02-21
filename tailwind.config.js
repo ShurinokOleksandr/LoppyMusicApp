@@ -9,8 +9,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'mono': ['Roboto Mono', 'monospace']
+    },
     extend: {
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 }

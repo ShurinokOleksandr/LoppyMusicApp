@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const Logo = () => {
+export const Logo = ({className}) => {
     return (
-        <div className='my-10 text-2xl font-bold text-stone-700'>
+        <div className={className}>
             <span className=' text-[#e60000]'>Loppy</span>
             Sound
         </div>

@@ -1,7 +1,7 @@
 import 'styles/globals.css'
 import React from "react";
 import Head from "next/head";
-import {Layout} from "@eh/widgets/layout";
+import {Layout} from "@lp/widgets/layout";
 const App =  ({ Component, pageProps }) => {
     return (
         <>

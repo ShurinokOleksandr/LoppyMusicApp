@@ -2,6 +2,7 @@ import React from 'react';
 import {ArrowPathRoundedSquareIcon, BarsArrowDownIcon, PauseCircleIcon, SpeakerWaveIcon, SpeakerXMarkIcon} from "@heroicons/react/24/outline";
 import Next from "/public/navigation-icons/nextPrev.svg";
 import Mix from "/public/navigation-icons/mix.svg";
+import {Timestamp} from "@lp/shared/ui/song-list/song-card/timestamp";
 
 export const Player = () => {
     return (
@@ -26,13 +27,9 @@ export const Player = () => {
                     </div>
                 </div>
                 <div className={'flex items-center justify-center'}>
-                    <div className={'text-[#848a96]'}>
-                        1:22
-                    </div>
+                    <Timestamp time={'1:22'} className={' text-sm text-[#848a96]'}/>
                     <input type={'range'} className='h-2 w-[500px] mx-2'/>
-                    <div className={'text-[#848a96]'}>
-                        3:09
-                    </div>
+                    <Timestamp time={'3:09'} className={'text-sm  text-[#848a96]'}/>
                 </div>
             </div>
         </div>

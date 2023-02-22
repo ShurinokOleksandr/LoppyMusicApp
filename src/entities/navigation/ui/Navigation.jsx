@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavigationButton} from "@eh/shared/ui/navigation-button";
+import {NavigationButton} from "@lp/shared/ui/navigation-button";
 
 export  const Navigation = ({navLinks,className}) => {
     return (

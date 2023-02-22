@@ -1,4 +1,4 @@
-export * from './right-sidebar'
+export * from './left-sidebar'
 export * from './main'
 export * from './player'
-export * from './left-sidebar'
+export * from './right-sidebar'

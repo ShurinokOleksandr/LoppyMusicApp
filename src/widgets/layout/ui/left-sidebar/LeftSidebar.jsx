@@ -23,7 +23,7 @@ export const LeftSidebar = ({className}) => {
 
     return (
         <>
-            <div className={`${className} bg-white text-stone-400 border-r-2 w-[235px] overflow-hidden sticky flex flex-col ml-4 pr-5`}>
+            <div className={className}>
                 <Logo className={'my-10 text-2xl font-bold text-stone-700'}/>
                 <Navigation navLinks={navLinks}/>
                 <Playlist className={'h-80 overflow-auto border-t-2 border-gray-400'}/>

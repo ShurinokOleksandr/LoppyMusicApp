@@ -1,7 +1,7 @@
 import React from 'react';
 import {HeadingLevel} from "@lp/shared/ui/heading-level";
 import {NavigationButton} from "@lp/shared/ui/navigation-button";
-import {SongList} from "@lp/shared/ui/song-list";
+import {SongList} from "@lp/features/song-list/ui";
 
 export const RecentlyPlayed = ({className}) => {
     return (

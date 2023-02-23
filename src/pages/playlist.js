@@ -2,55 +2,28 @@ import React, {useState} from 'react';
 import { ClockIcon, EllipsisHorizontalIcon, HeartIcon, PlayIcon} from "@heroicons/react/24/outline";
 import Image from "next/image";
 import lol from "../../public/e0640caa49009147a3d3ca3a99b65c3d.jpg";
+import {HeaderMainLayout, HeadingLevel} from "@lp/shared/ui";
+import {ActionButtons} from "@lp/features/action-buttons";
+import {Search} from "@lp/features/search";
 
 const Playlist = () => {
     const [save,setSave] = useState('')
 
     return (
-        <div>
-            <div className={`my-10 mx-16  bg-[#f1f2fb] border-b-3`}>
-                <div className={''}>
-                    <h1 className={'text-[#5b647d] w-[30%] font-bold text-4xl mb-6'}><span className={'text-[#e60000] '}>Мой</span> плейлист</h1>
-                    <div className={'flex   text-[#5b647d]  font-bold'}>
-                        <Image src={lol}  className={'w-[250px] h-[250px] mr-10 object-cover rounded-2xl '} alt={'avatar playlist'}/>
-                        <div className={'w-full'}>
-                            <input type="text" placeholder={'Поиск треков и выпусков'} className={'w-[70%] rounded p-2 text-sm '}/>
-                            <ul className={'w-[70%] h-[210px] overflow-auto px-3'}>
-                                <li className={'flex items-center justify-between my-5'}>
-                                    <div className={'flex'}>
-                                        <Image src={lol} height={0} className={'w-10 h-10 mr-3 rounded object-cover'} alt={'avatar'}/>
-                                        <div className={'text-sm'}>
-                                            <p className={'font-bold  hover:underline'}>name</p>
-                                            <p className={' hover:underline'}>author </p>
-                                        </div>
-                                    </div>
-                                    <button className={'border-2 border-gray-500 rounded-2xl px-3 py-1 hover:bg-[#cc040b] hover:border-[#cc040b] hover:text-white'}>Добавить</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <ul className={'flex w-[25%] items-center justify-between m-5'}>
-                <li>
-                    <button>
-                        <PlayIcon fill={'red'} className={'w-12 font-bold bg-white border-2 border-red-500 rounded-2xl p-3 text-[red] hover:scale-110 hover:duration-500'}/>
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        <HeartIcon className={'w-8 hover:scale-110 hover:duration-500'}/>
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        <EllipsisHorizontalIcon className={'w-8 hover:scale-110 hover:duration-500'}/>
-                    </button>
-                </li>
-                <li>
-                    190 треков
-                </li>
-            </ul>
+        <>
+            <HeaderMainLayout className={'my-10 mx-16  bg-[#f1f2fb] border-b-3'} isInput={true}>
+                <HeadingLevel className={'text-[#5b647d] w-[30%] font-bold text-4xl mb-6'}><span className={'text-[#e60000] '}>
+                    Мой</span> плейлист
+                </HeadingLevel>
+            </HeaderMainLayout>
+            {/*<div className={`my-10 mx-16  bg-[#f1f2fb] border-b-3`}>*/}
+
+            {/*    <div className={'flex   text-[#5b647d]  font-bold'}>*/}
+            {/*        <Image src={lol}  className={'w-[250px] h-[250px] mr-10 object-cover rounded-2xl '} alt={'avatar playlist'}/>*/}
+            {/*        <Search className={'w-full'}/>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+            <ActionButtons className={'flex w-[25%] items-center justify-between m-5'}/>
             <ul className={'p-2 text-[#293046] px-5 relative  '}>
                 <li className={'flex mb-3 items-center font-semibold  h-15 p-3 sticky top-0 bg-white border-b-2'}>
                     <div className={'mr-3 w-[5%] '}>#</div>
@@ -83,7 +56,7 @@ const Playlist = () => {
                     }
                 </li>
             </ul>
-        </div>
+        </>
     );
 };
 

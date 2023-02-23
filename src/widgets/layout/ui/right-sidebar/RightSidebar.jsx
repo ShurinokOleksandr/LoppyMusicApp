@@ -1,5 +1,5 @@
 import React from 'react';
-import {UserPanel} from "@lp/shared/ui/user-panel";
+import {UserPanel} from "@lp/entities/user-panel/ui";
 import {RecentlyPlayed} from "@lp/features/recenty-played/ui";
 import {NowPlaying} from "@lp/features/now-playing/ui";
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {LeftSidebar, Main, Player, RightSidebar,} from "@lp/widgets/layout/ui";
 import 'typeface-roboto-mono'
 

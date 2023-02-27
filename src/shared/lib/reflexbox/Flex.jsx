@@ -2,7 +2,8 @@ import React from 'react';
 
 export const Flex = ({
                          children,
-                         className
+                         className,
+
                      }) => {
     return (
         <div className={`flex ${className}`}>

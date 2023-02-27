@@ -2,7 +2,7 @@ import React from 'react';
 import {BookOpenIcon, ComputerDesktopIcon, HeartIcon, MagnifyingGlassIcon, SquaresPlusIcon} from "@heroicons/react/24/outline";
 import {Logo} from "@lp/shared/ui/logo";
 import {Navigation} from "@lp/entities/navigation/ui";
-import {Playlist} from "@lp/entities/playlist/ui";
+import {Playlist} from "@lp/entities/playlist-button/ui";
 import {useRouter} from "next/router";
 import {isActiveLink} from "@lp/shared/lib/is-active-link";
 

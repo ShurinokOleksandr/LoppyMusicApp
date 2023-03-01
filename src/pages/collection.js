@@ -7,7 +7,6 @@ import {MyCollection} from "@lp/features/collection";
 
 const Collection = () => {
 
-
     return (
         <div className={'m-5'}>
             <HeadingLevel className={'mb-5  text-[#5b647d] font-bold text-4xl'}>

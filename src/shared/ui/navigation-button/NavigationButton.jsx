@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import {useRouter} from "next/router";
+import {isActiveLink} from "@lp/shared/lib";
 export const NavigationButton = (
     {
         name,
@@ -8,6 +9,7 @@ export const NavigationButton = (
         className,
         classParent,
         icon,
+        onClick,
     }) => {
     const {pathname} = useRouter()
     return (
@@ -20,16 +22,17 @@ export const NavigationButton = (
                             href={`/${link}`}
                         >
                             {icon}
-                            <p className={`${pathname.slice(1) === link ? `font-bold text-[#293046]` : ""} ml-4  hover:font-bold `}>
+                            <p className={isActiveLink(pathname,link,`font-bold ml-2 text-[#293046]`,'')+ ` ml-4  hover:font-bold `}>
                                 {name}
                             </p>
                         </Link>
                     )
                     : (<button
+                    onClick={onClick}
                             className={className}
                         >
                             {icon}
-                            <p className={`${pathname.slice(1) === link ? `font-bold text-[#293046]` : ''} ml-4  hover:font-bold `}>
+                            <p className={isActiveLink(pathname,link,`font-bold ml-2 text-[#293046]`,'')+ ` ml-3 hover:font-bold `}>
                                 {name}
                             </p>
                         </button>)

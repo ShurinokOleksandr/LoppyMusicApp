@@ -18,10 +18,8 @@ const Search = () => {
     return (
         <div className={'m-5'}>
             <InputSearch className={'my-5 w-[50%] rounded p-2 text-sm font-semibold text-[#2b3247]'}/>
-            <SwiperContent className={'relative p-5'} a={a}>
-                История поиска
-            </SwiperContent>
-            <SwiperContent className={'relative p-5'} a={a}>
+
+            <SwiperContent key={143} className={'relative p-5'} a={a}>
                 Жанры
             </SwiperContent>
         </div>

@@ -1,17 +1,27 @@
 import React from 'react';
-import {BookOpenIcon, ComputerDesktopIcon, HeartIcon, MagnifyingGlassIcon, SquaresPlusIcon} from "@heroicons/react/24/outline";
+import {
+    ArrowLeftOnRectangleIcon,
+    BookOpenIcon,
+    ComputerDesktopIcon,
+    HeartIcon,
+    MagnifyingGlassIcon,
+    SquaresPlusIcon
+} from "@heroicons/react/24/outline";
 import {Logo} from "@lp/shared/ui/logo";
 import {Navigation} from "@lp/entities/navigation/ui";
 import {Playlist} from "@lp/entities/playlist-button/ui";
 import {useRouter} from "next/router";
 import {isActiveLink} from "@lp/shared/lib/is-active-link";
+import {NavigationButton} from "@lp/shared/ui";
+import {useDispatch} from "react-redux";
+import {setToken} from "@lp/features/auth";
 
 
 
 export const LeftSidebar = ({className}) => {
 
-    const {pathname} = useRouter()
-
+    const {pathname,push} = useRouter()
+    const dispatch = useDispatch()
 
     const navLinks = [
         { link: '', name: 'Главная', icon: <ComputerDesktopIcon width={'25'}  stroke={'#293046'} fill={isActiveLink(pathname,'')}/> },
@@ -20,13 +30,25 @@ export const LeftSidebar = ({className}) => {
         { link: 'home', name: 'Домашняя', icon: <HeartIcon width={'25'}  stroke={'#293046'} fill={isActiveLink(pathname,'home')}/> },
         { link: null, name: 'Создать плейлист', icon: <SquaresPlusIcon width={'25'} stroke={'#293046'} /> },
     ];
-
+    const looOut = () =>{
+        push('/auth')
+        dispatch(setToken(''))
+        window.localStorage.removeItem('code')
+    }
     return (
         <>
             <div className={className}>
-                <Logo className={'my-10 text-2xl font-bold text-stone-700'}/>
-                <Navigation navLinks={navLinks}/>
-                <Playlist className={'h-80 overflow-auto border-t-2 border-gray-400'}/>
+                <div>
+                    <Logo className={'my-10 text-2xl font-bold text-stone-700'}/>
+                    <Navigation navLinks={navLinks}/>
+                    <Playlist className={'h-80 overflow-auto border-t-2 border-gray-400'}/>
+                </div>
+                <NavigationButton
+                    className={isActiveLink(pathname,'auth','hidden','text-lg text-[#293046] font-bold my-5 hover:scale-110 hover:duration-500 flex')}
+                    name={'Выйти'}
+                    icon={<ArrowLeftOnRectangleIcon className={'w-6'}/>}
+                    onClick={()=>looOut() }
+                />
             </div>
         </>
     )

@@ -15,6 +15,7 @@ import {isActiveLink} from "@lp/shared/lib/is-active-link";
 import {NavigationButton} from "@lp/shared/ui";
 import {useDispatch} from "react-redux";
 import {setToken} from "@lp/features/auth";
+import {signOut} from "next-auth/react";
 
 
 
@@ -30,11 +31,7 @@ export const LeftSidebar = ({className}) => {
         { link: 'home', name: 'Домашняя', icon: <HeartIcon width={'25'}  stroke={'#293046'} fill={isActiveLink(pathname,'home')}/> },
         { link: null, name: 'Создать плейлист', icon: <SquaresPlusIcon width={'25'} stroke={'#293046'} /> },
     ];
-    const looOut = () =>{
-        push('/auth')
-        dispatch(setToken(''))
-        window.localStorage.removeItem('code')
-    }
+
     return (
         <>
             <div className={className}>
@@ -47,7 +44,7 @@ export const LeftSidebar = ({className}) => {
                     className={isActiveLink(pathname,'auth','hidden','text-lg text-[#293046] font-bold my-5 hover:scale-110 hover:duration-500 flex')}
                     name={'Выйти'}
                     icon={<ArrowLeftOnRectangleIcon className={'w-6'}/>}
-                    onClick={()=>looOut() }
+                    onClick={() => signOut()}
                 />
             </div>
         </>

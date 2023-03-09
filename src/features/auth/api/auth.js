@@ -1,6 +1,6 @@
 import {AUTH_ENDPOINT, CLIENT_ID, CLIENT_SECRET, REDIRECT} from "@lp/shared/config";
 
-function auth(code){
+export function auth(code){
     const params =new URLSearchParams({
         "grant_type": 'authorization_code',
         "code": code,
@@ -10,8 +10,8 @@ function auth(code){
         method: "POST",
         body:params,
         headers:{
-            'Authorization': 'Basic ' + (Buffer.from(CLIENT_ID + ':' + CLIENT_SECRET).toString('base64')),
+            'Authorization': `Basic ${new Buffer(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64')}`,
             'Content-Type': 'application/x-www-form-urlencoded'
         }
-    }).then(response => response.json()).then(data => data)
+    }).then(response => response.json()).then(data=> data)
 }

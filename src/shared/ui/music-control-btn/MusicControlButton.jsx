@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const MusicControlButton = ({className,children,handleClick}) => {
+export const Button = ({className,children,handleClick}) => {
     return (
         <button onClick={() => handleClick()} className={className} >
             {children}

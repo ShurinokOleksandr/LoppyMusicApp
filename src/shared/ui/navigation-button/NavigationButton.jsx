@@ -27,15 +27,17 @@ export const NavigationButton = (
                             </p>
                         </Link>
                     )
-                    : (<button
-                    onClick={onClick}
+                    : (
+                        <button
+                            onClick={onClick}
                             className={className}
                         >
                             {icon}
                             <p className={isActiveLink(pathname,link,`font-bold ml-2 text-[#293046]`,'')+ ` ml-3 hover:font-bold `}>
                                 {name}
                             </p>
-                        </button>)
+                        </button>
+                    )
             }
         </div>
     );

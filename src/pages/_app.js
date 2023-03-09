@@ -4,18 +4,21 @@ import Head from "next/head";
 import {Layout} from "@lp/widgets/layout";
 import {Provider} from "react-redux";
 import {store} from "@lp/store";
-const App =  ({ Component, pageProps }) => {
+import {SessionProvider} from "next-auth/react";
+const App =  ({ Component,pageProps: { session, ...pageProps } }) => {
 
     return (
         <>
 
-                <Head>
-                    <title>Loppy</title>
-                </Head>
+            <Head>
+                <title>Loppy</title>
+            </Head>
             <Provider store={store}>
-                <Layout>
-                    <Component {...pageProps} />
-                </Layout>
+                <SessionProvider session={session}>
+                    <Layout>
+                        <Component {...pageProps} />
+                    </Layout>
+                </SessionProvider>
             </Provider>
         </>
     )

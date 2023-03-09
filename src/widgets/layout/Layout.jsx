@@ -1,18 +1,15 @@
-"use client"
 import React, {useEffect, useState} from 'react';
 import 'typeface-roboto-mono'
 import {LeftSidebar, Main, Player, RightSidebar} from "@lp/widgets/layout/ui";
 import {useRouter} from "next/router";
 import {useSession} from "next-auth/react";
-import Auth from "@lp/features/auth/ui/auth";
+import {Auth} from "@lp/features/auth";
 
 
 export const Layout = ({children}) => {
     const router = useRouter();
     const {data,status} = useSession()
-    useEffect(() => {
-        router.push('/')
-    },[])
+
     if (status === "loading") {
         return <p>Hang on there...</p>
     }

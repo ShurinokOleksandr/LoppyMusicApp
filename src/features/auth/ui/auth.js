@@ -4,7 +4,7 @@ import {Button, HeadingLevel, Paragraph} from "@lp/shared/ui";
 import {useRouter} from "next/router";
 
 
-const Auth = () => {
+export const Auth = () => {
     const router = useRouter()
     const s = useSession()
     if (s.status === "loading") {
@@ -12,7 +12,7 @@ const Auth = () => {
     }
 
     return (
-            <h1 className={'h-screen font-mono w-full  text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-600   text-center shadow-2xl shadow-blue-800/80 py-36 px-20'}>
+            <HeadingLevel className={'h-screen font-mono w-full  text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-600   text-center shadow-2xl shadow-blue-800/80 py-36 px-20'}>
                 <Paragraph className={'italic font-bold  text-4xl mb-5'}>
                     🔥Приветствую тебя в своём приложении✌️
                 </Paragraph>
@@ -25,8 +25,8 @@ const Auth = () => {
                 >
                     Зайти
                 </Button>
-            </h1>
+            </HeadingLevel>
     );
 }
-export default Auth;
+
 

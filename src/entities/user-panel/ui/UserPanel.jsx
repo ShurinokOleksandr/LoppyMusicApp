@@ -18,3 +18,6 @@ export const UserPanel = ({className}) => {
     );
 };
 
+export async function getStaticProps(){
+
+}

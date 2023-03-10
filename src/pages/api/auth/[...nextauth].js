@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import SpotifyProvider from "next-auth/providers/spotify";
-import {CLIENT_ID, CLIENT_SECRET} from "@lp/shared/config";
+import {CLIENT_ID, CLIENT_SECRET, SCOPES} from "@lp/shared/config";
 
 
 
@@ -10,6 +10,7 @@ export default NextAuth({
         SpotifyProvider({
             clientId: CLIENT_ID,
             clientSecret: CLIENT_SECRET,
+            authorization: { params: { scope: SCOPES } },
         }),
     ],
     pages: {
@@ -19,6 +20,7 @@ export default NextAuth({
         async jwt({ token, account }) {
             // Persist the OAuth access_token to the token right after signin
             if (account) {
+                token.refreshToken = account.refresh_token
                 token.accessToken = account.access_token
             }
             return token
@@ -26,6 +28,7 @@ export default NextAuth({
         async session({ session, token, user }) {
             // Send properties to the client, like an access_token from a provider.
             session.accessToken = token.accessToken
+            session.refreshToken = token.refreshToken
             return session
         }
     }

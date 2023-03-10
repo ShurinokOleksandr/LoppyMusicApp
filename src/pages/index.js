@@ -18,25 +18,25 @@ const a = [
 const Index = () => {
     const dispatch = useDispatch()
     const router = useRouter();
+    const session = useSession()
+    const handleClick =  () =>{
+        console.log(session.data.accessToken)
+         fetch(`https://api.spotify.com/v1/me/tracks`,{
+            headers: {
+                Authorization: `Bearer ${session.data.accessToken}`,
+                'Content-Type': 'application/json'
+            }
 
-    // const handleClick =  () =>{
-    //     console.log(access_token)
-    //      fetch(`https://api.spotify.com/v1/me/tracks`,{
-    //         headers: {
-    //             Authorization: `Bearer ${access_token}`,
-    //             'Content-Type': 'application/json'
-    //         }
-    //
-    //     }).then(res => res.json()).then(data => console.log(data)).catch(error => {console.error('Error:', error);});
-    // }
+        }).then(res => res.json()).then(data => console.log(data)).catch(error => {console.error('Error:', error);});
+    }
     return (
         <div className=''>
             <HeadingLevel className={'text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-600 italic shadow-2xl shadow-blue-800/80 font-bold text-center text-4xl py-20 mb-20'}>
                 🔥Приветствую тебя в своём приложении✌️
             </HeadingLevel>
-            {/*<button onClick={handleClick}>*/}
-            {/*    загрузить*/}
-            {/*</button>*/}
+            <button onClick={handleClick}>
+                загрузить
+            </button>
             <SwiperContent a={a}>
                     контент
             </SwiperContent>

@@ -2,14 +2,15 @@ import React, {useEffect, useState} from 'react';
 import 'typeface-roboto-mono'
 import {LeftSidebar, Main, Player, RightSidebar} from "@lp/widgets/layout/ui";
 import {useRouter} from "next/router";
-import {useSession} from "next-auth/react";
+import {getSession, useSession} from "next-auth/react";
 import {Auth} from "@lp/features/auth";
 
 
-export const Layout = ({children}) => {
+export const Layout = ({children,userInfo}) => {
     const router = useRouter();
     const {data,status} = useSession()
 
+    // console.log(userInfo)
     if (status === "loading") {
         return <p>Hang on there...</p>
     }
@@ -33,3 +34,24 @@ export const Layout = ({children}) => {
 
     );
 };
+async function getUserInfo(accessToken) {
+    const response = await fetch("https://api.spotify.com/v1/me", {
+        headers: {
+            Authorization: `Bearer ${accessToken}`,
+        },
+    });
+
+    const data = await response.json();
+    return data;
+}
+export async function getServerSideProps(context) {
+    const session = await getSession(context);
+    const accessToken = session.accessToken;
+    const userInfo = await getUserInfo(accessToken);
+
+    return {
+        props: {
+            userInfo,
+        },
+    };
+}

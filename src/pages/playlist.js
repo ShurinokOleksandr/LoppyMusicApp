@@ -13,7 +13,7 @@ const Playlist = () => {
             </HeaderMainLayout>
             <ActionButtons className={'flex w-[25%] items-center justify-between m-5'}/>
             <PanelSongList/>
-            <SongList className={'text-[#293046] text-sm mx-5'} popular={'f'} time={1}/>
+            <SongList className={'text-[#293046] text-sm mx-5'} popular={'f'} data={[]} time={1}/>
         </>
     );
 };

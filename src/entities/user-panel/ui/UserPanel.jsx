@@ -11,8 +11,16 @@ export const UserPanel = ({className}) => {
     return (
         <Flex className={className}>
             <Flex className={'items-center'}>
-                <Image src={data.user.image} width={40} height={0} className={'h-[40px] mr-4 rounded-full object-cover'} alt="avatar"/>
-                <HeadingLevel className={'font-semibold'}>{data.user.name}</HeadingLevel>
+                <Image
+                    src={data.user.image}
+                    width={40}
+                    height={10}
+                    className={'h-[40px] mr-4 rounded-full object-cover'}
+                    alt="avatar"
+                />
+                <HeadingLevel className={'font-semibold'}>
+                    {data.user.name}
+                </HeadingLevel>
             </Flex>
             <Button className='w-6 h-6 hover:w-[1.7rem]'>
                 <BellIcon />

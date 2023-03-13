@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Artist = () => {
+const Id = () => {
     return (
         <div>
             artist
@@ -8,4 +8,4 @@ const Artist = () => {
     );
 };
 
-export default Artist;
+export default Id;

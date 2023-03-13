@@ -1,15 +1,21 @@
 import React from 'react';
-import {TitleLink} from "@lp/shared/ui";
+import {Paragraph, TitleLink} from "@lp/shared/ui";
 
-export const SongCard = ({className,name,author}) => {
+export const SongCard = (
+    {
+        className,
+        name,
+        author,
+        artist_id
+    }) => {
     return (
-            <div className={className}>
-                <TitleLink link={'#'} className={'block text-sm font-bold'}>
-                    {name}
-                </TitleLink>
-                <TitleLink link={'#'} className={'block text-xs'}>
-                    {author}
-                </TitleLink>
-            </div>
+        <div className={className}>
+            <Paragraph link={`tr`} className={'block truncate w-[8rem] text-sm font-bold'}>
+                {name}
+            </Paragraph>
+            <TitleLink link={`/artist/${artist_id}`} className={'block truncate w-[8rem] text-xs'}>
+                {author}
+            </TitleLink>
+        </div>
     );
 };

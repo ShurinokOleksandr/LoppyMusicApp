@@ -15,15 +15,13 @@ import {isActiveLink} from "@lp/shared/lib/is-active-link";
 import {NavigationButton} from "@lp/shared/ui";
 import {useDispatch} from "react-redux";
 import {setToken} from "@lp/features/auth";
-import {signOut} from "next-auth/react";
+import {signOut, useSession} from "next-auth/react";
 
 
 
 export const LeftSidebar = ({className}) => {
 
-    const {pathname,push} = useRouter()
-    const dispatch = useDispatch()
-
+    const {pathname} = useRouter()
     const navLinks = [
         { link: '', name: 'Главная', icon: <ComputerDesktopIcon width={'25'}  stroke={'#293046'} fill={isActiveLink(pathname,'')}/> },
         { link: 'search', name: 'Поиск', icon: <MagnifyingGlassIcon width={'25'} stroke={'#293046'} fill={isActiveLink(pathname,'search')}/> },
